@@ -1,0 +1,141 @@
+<title>Register</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+<br/>
+<div
+  style="
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    height: 940px;
+    width: 500px;
+    margin: 0 auto;
+  "
+>
+<%-include('messages.ejs')%>
+<div style="text-align:center">
+ 
+    </div>
+<br/>
+
+<h1>Register With Us</h1>
+<p style="font-weight: 12px;">AuthWorld Respects Your Privacy</p>
+<i class="large material-icons" style="font-size: 98px;color: darkgreen;">account_circle</i>
+<p style="font-weight: bolder;">Welcome To AuthWorld</p>
+  <form style="padding-top:40px;" action="/users/register" method="POST">
+
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Your Email"
+        value="<%= typeof email != 'undefined' ? email : '' %>"
+        style="
+        background: none;
+        outline: none;
+        border-bottom-color: orange;
+        border-bottom-width: 5px;
+        border-bottom-style: solid;
+        width: 400px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin: 0 auto;
+        text-align: center;
+      "
+      />
+      
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+        <input
+          type="text"
+          name="name"
+          value="<%= typeof name != 'undefined' ? name : '' %>"
+          class="form-control"
+          id="exampleInputtext"
+          aria-describedby="emailHelp"
+          placeholder="Enter Your Name"
+          style="
+          background: none;
+          outline: none;
+          border-bottom-color: orange;
+          border-bottom-width: 5px;
+          border-bottom-style: solid;
+          width: 400px;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          margin: 0 auto;
+          text-align: center;
+        "
+        />
+      </div>
+      <br/>
+    <div class="mb-3" style="text-align: center; margin: 0 auto">
+      <input
+        type="password"
+        name="password"
+        value="<%= typeof password != 'undefined' ? password : '' %>"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter a Password"
+        style="
+          background: none;
+          outline: none;
+          border-bottom-color: green;
+          border-bottom-width: 5px;
+          border-bottom-style: solid;
+          width: 400px;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          margin: 0 auto;
+          text-align: center;
+        "
+      />
+      <div id="emailHelp" class="form-text">
+        Enter a Password More Than 6 Charachters
+      </div>
+    </div>
+    <br/>
+    <div class="mb-3" style="text-align: center; margin: 0 auto">
+        <input
+          type="password"
+          name="password2"
+          value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Enter a Password"
+         
+          style="
+            background: none;
+            outline: none;
+            border-bottom-color: green;
+            border-bottom-width: 5px;
+            border-bottom-style: solid;
+            width: 400px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin: 0 auto;
+            text-align: center;
+          "
+        />
+    <br/>
+    <button type="submit" class="btn btn-success" style="width: 400px;">Submit</button>
+  </form>
+  <br/>
+  <a href="/users/login" style="text-decoration: none;color:black;">Already Have An Account?</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
