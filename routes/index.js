@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {ensureAuthenticated} = require('../config/auth');
-router.get('/',(req,res)=>{
+const {ensureAuthenticated, forwardAuth} = require('../config/auth');
+router.get('/',forwardAuth,(req,res)=>{
     res.render('index');
 })
 
